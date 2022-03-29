@@ -29,16 +29,7 @@ def backprop(W, aas, zzs, yTr, trans_func_der):
     # compute gradient with back-prop
     gradient = [None] * len(W)
     for i in range(len(W)):
-        # INSERT CODE HERE:
-        # if i==0:
-        #     delta=delta*trans_func_der(aas[i])
-        #     gradient[i]=np.dot(delta,zzs[i+1].T)/n
-        #     delta = np.dot(W[i][:,:-1].T,delta)*trans_func_der(aas[i+1])
-        # else:
-        #     gradient[i] = np.dot(delta, zzs[i + 1].T) / n
-        #     delta = np.dot(W[i][:, :-1].T, delta) * trans_func_der(aas[i + 1])
-        #pass
         gradient[i] = np.dot(delta, zzs[i + 1].T) / n
-        delta = np.dot(W[i][:, :-1].T, delta) * trans_func_der(aas[i + 1])
+        delta = np.multiply(trans_func_der(aas[i + 1]),np.dot(W[i][:, :-1].T, delta) )
 
     return gradient

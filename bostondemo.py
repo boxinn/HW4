@@ -14,10 +14,10 @@ from deepnet import deepnet
 def bostondemo(wst = None):
         
     bostonData = sio.loadmat('./boston.mat')
-    TRANSNAME='sigmoid'
-    ROUNDS=200 #default 200
-    ITER=50;
-    STEPSIZE=0.01; #default 0.01
+    TRANSNAME='relu'
+    ROUNDS=250 #default 200
+    ITER=200;
+    STEPSIZE=0.005; #default 0.01
     
     xTr = bostonData['xTr']
     xTe = bostonData['xTe']

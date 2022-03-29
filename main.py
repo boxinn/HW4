@@ -5,10 +5,10 @@ import numpy as np
 # Also feel free to use this file to do any testing as it will not be called by the autograder
 
 best_parameters = {
-    'TRANSNAME' : 'sigmoid',
-    'ROUNDS' : 200,
-    'ITER' : 50,
-    'STEPSIZE' : 0.01,
+    'TRANSNAME' : 'relu',
+    'ROUNDS' : 250,
+    'ITER' : 200,
+    'STEPSIZE' : 0.005,
     'wst' : np.array([1,20,20,20,13])
 }
 
