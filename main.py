@@ -5,11 +5,11 @@ import numpy as np
 # Also feel free to use this file to do any testing as it will not be called by the autograder
 
 best_parameters = {
-    'TRANSNAME' : 'relu',
-    'ROUNDS' : 250,
-    'ITER' : 200,
-    'STEPSIZE' : 0.005,
-    'wst' : np.array([1,20,20,20,13])
+    'ROUNDS' : 150,
+    'ITER' : 50,
+    'STEPSIZE' : 0.01,
+    'TRANSNAME' : 'sigmoid',
+    'wst' : np.array([1,13,20,13])
 }
 
 with open('best_parameters.pickle', 'wb') as f:

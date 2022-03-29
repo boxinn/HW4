@@ -15,15 +15,15 @@ def bostondemo(wst = None):
         
     bostonData = sio.loadmat('./boston.mat')
     TRANSNAME='relu'
-    ROUNDS=250 #default 200
-    ITER=200;
-    STEPSIZE=0.005; #default 0.01
+    ROUNDS=150 #default 200
+    ITER=50;
+    STEPSIZE=0.01; #default 0.01
     
     xTr = bostonData['xTr']
     xTe = bostonData['xTe']
     
     if wst == None:
-        wst = np.array([1,20,20,20,np.shape(xTr)[0]])
+        wst = np.array([1,13,20,np.shape(xTr)[0]])
     #print(wst)
     
     
